@@ -1,0 +1,10 @@
+{
+    "name": "ini1990/php-project-lvl1",
+    "authors": [
+        {
+            "name": "ini1990",
+            "email": "ini1990g@gmail.com"
+        }
+    ],
+    "require": {}
+}
