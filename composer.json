@@ -1,5 +1,8 @@
 {
     "name": "ini1990/php-project-lvl1",
+    "bin": [
+      "bin/brain-games"
+    ],
     "authors": [
         {
             "name": "ini1990",
