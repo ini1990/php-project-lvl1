@@ -1,5 +1,3 @@
-#!/usr/bin/env php
-<?
 
 use BrainGames\Cli;
 
@@ -15,4 +13,4 @@ Cli\run();
 some test;
 Run();;
 
-
+?>
