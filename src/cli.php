@@ -3,7 +3,7 @@
 namespace BrainGames\Cli;
 
 use function Cli\line;
-use function cli\prompt;
+use function Cli\prompt;
 
 function run()
 {

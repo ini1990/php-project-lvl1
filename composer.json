@@ -2,11 +2,13 @@
     "name": "ini1990/php-project-lvl1",
     "autoload": {
         "files": [
-            "src/cli.php"
+            "src/cli.php",
+            "src/even.php"
         ]
       },
     "bin": [
-      "bin/brain-games"
+      "bin/brain-games",
+      "bin/brain-even"
     ],
     "authors": [
         {
