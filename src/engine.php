@@ -7,7 +7,8 @@ const ROUNDS = 3;
 use function cli\line;
 use function cli\prompt;
 
-function play ($rules, $questions){
+function play($rules, $questions)
+{
     line('Welcome to the Brain Game!');
     line("{$rules}");
     $name = prompt('May I have your name?');
