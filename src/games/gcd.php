@@ -10,13 +10,13 @@ function run()
         $a = rand(1, 100);
         $b = rand(1, 100);
         $question = "{$a} {$b}";
-        $correct = gcd($a, $b);
+        $correct = getGcd($a, $b);
         $questions[] = [$question, $correct];
     }
     \BrainGames\play($rules, $questions);
 }
 
-function gcd(int $a, int $b): int
+function getGcd(int $a, int $b): int
 {
     while ($a != $b) {
         if ($a > $b) {
