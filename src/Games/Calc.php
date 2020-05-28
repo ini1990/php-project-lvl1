@@ -2,18 +2,20 @@
 
 namespace BrainGames\Games\Calc;
 
+use const BrainGames\ROUNDS_COUNT;
+
 function run()
 {
     $rules = 'What is the result of the expression?';
     $operators = ['+', '-', '*'];
     $questions = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $value1 = rand(0, 200);
         $value2 = rand(0, 200);
         $operator = $operators[array_rand($operators)];
         $question = "{$value1} {$operator} {$value2}";
-        $correct = calc($value1, $operator, $value2);
-        $questions[] = [$question, $correct];
+        $correctAnswer = calc($value1, $operator, $value2);
+        $questions[] = [$question, $correctAnswer];
     }
     \BrainGames\play($rules, $questions);
 }
