@@ -7,16 +7,15 @@ const ROUNDS_COUNT = 3;
 use function cli\line;
 use function cli\prompt;
 
-function play($rules, $questions)
+function play($description, $questions)
 {
     line('Welcome to the Brain Game!');
-    line("{$rules}");
+    line("{$description}");
     line();
     $name = prompt('May I have your name?');
     line("Hi, %s!", $name);
     line();
 
-    $congratulations = true;
     foreach ($questions as [$question, $correctAnswer]) {
         line("Question: %s", $question);
         $answer = prompt('Your answer');
@@ -24,12 +23,8 @@ function play($rules, $questions)
             line("Correct!");
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-            line("Let's try again, %s!", $name);
-            $congratulations = false;
-            break;
+            return line("Let's try again, %s!", $name);
         }
     }
-    if ($congratulations) {
-        line("Congratulations, %s!", $name);
-    }
+    return line("Congratulations, %s!", $name);
 }

@@ -6,7 +6,7 @@ use const BrainGames\ROUNDS_COUNT;
 
 function run()
 {
-    $rules = 'Find the greatest common divisor of given numbers.';
+    $description = 'Find the greatest common divisor of given numbers.';
     $questions = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $a = rand(1, 100);
@@ -15,7 +15,7 @@ function run()
         $correctAnswer = getGcd($a, $b);
         $questions[] = [$question, $correctAnswer];
     }
-    \BrainGames\play($rules, $questions);
+    \BrainGames\play($description, $questions);
 }
 
 function getGcd(int $a, int $b): int

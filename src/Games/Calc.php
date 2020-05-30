@@ -6,7 +6,7 @@ use const BrainGames\ROUNDS_COUNT;
 
 function run()
 {
-    $rules = 'What is the result of the expression?';
+    $description = 'What is the result of the expression?';
     $operators = ['+', '-', '*'];
     $questions = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
@@ -17,7 +17,7 @@ function run()
         $correctAnswer = calc($value1, $operator, $value2);
         $questions[] = [$question, $correctAnswer];
     }
-    \BrainGames\play($rules, $questions);
+    \BrainGames\play($description, $questions);
 }
 
 function calc($value1, $operator, $value2)
