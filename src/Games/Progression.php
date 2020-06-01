@@ -24,7 +24,7 @@ function run()
 
 function getProgression($start, $difference, $sizeProgression)
 {
-    $stepsAmount = $size - 1;
+    $stepsAmount = $sizeProgression - 1;
     $end = $start + ($difference * $stepsAmount);
     $progression = range($start, $end, $difference);
 }
