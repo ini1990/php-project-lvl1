@@ -12,7 +12,7 @@ function run()
         $start = rand(1, 20);
         $step = rand(2, 10);
         $stepsAmount = 9;
-        $end = $start + ($step * $amount);
+        $end = $start + ($step * $stepsAmount);
         $progression = range($start, $end, $step);
         $index = array_rand($progression);
         $correctAnswer = $progression[$index];
