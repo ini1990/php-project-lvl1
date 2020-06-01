@@ -11,7 +11,7 @@ function run()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $start = rand(1, 20);
         $step = rand(2, 10);
-        $amount = 9;
+        $stepsAmount = 9;
         $end = $start + ($step * $amount);
         $progression = range($start, $end, $step);
         $index = array_rand($progression);
