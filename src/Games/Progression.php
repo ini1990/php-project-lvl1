@@ -8,12 +8,11 @@ function run()
 {
     $description = 'What number is missing in the progression?';
     $questions = [];
+    $sizeProgression = 10;
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $start = rand(1, 20);
-        $step = rand(2, 10);
-        $stepsAmount = 9;
-        $end = $start + ($step * $stepsAmount);
-        $progression = range($start, $end, $step);
+        $difference = rand(2, 10);
+        $progression = getProgression($start, $difference, $sizeProgression);
         $index = array_rand($progression);
         $correctAnswer = $progression[$index];
         $progression[$index] = '..';
@@ -21,4 +20,11 @@ function run()
         $questions[] = [$question, $correctAnswer];
     }
     \BrainGames\play($description, $questions);
+}
+
+function getProgression($start, $difference, $sizeProgression)
+{
+    $stepsAmount = $size - 1;
+    $end = $start + ($difference * $stepsAmount);
+    $progression = range($start, $end, $difference);
 }
